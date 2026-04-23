@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:id="@+id/gc_li_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:text="WEALTH"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_gold"
+            android:letterSpacing="0.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="TRACKER"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:letterSpacing="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/gc_li_viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/gc_li_header"
+        app:layout_constraintBottom_toTopOf="@id/gc_li_tab_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/gc_li_tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/bg_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/accent_gold"
+        app:tabIndicatorGravity="top"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/accent_gold"
+        app:tabTextColor="@color/text_muted"
+        app:tabTextAppearance="@style/TabTextAppearance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
